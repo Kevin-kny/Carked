@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
   "dev": "next dev --turbopack",
-  "build": "prisma generate --binaryTargets=rhel-openssl-3.0.x && next build --turbopack",
+  "build": "prisma generate && next build --turbopack",
   "start": "next start",
   "lint": "eslint",
-  "postinstall": "prisma generate --binaryTargets=rhel-openssl-3.0.x"
+  "postinstall": "prisma generate"
 },
   "dependencies": {
     "@arcjet/inspect": "^1.0.0-beta.15",
