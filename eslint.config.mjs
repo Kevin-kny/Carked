@@ -9,15 +9,24 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+// 🔥 FIXED: JavaScript-only config (no TypeScript)
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
   {
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 2022,
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
     ignores: [
       "node_modules/**",
       ".next/**",
       "out/**",
       "build/**",
-      "next-env.d.ts",
     ],
   },
 ];

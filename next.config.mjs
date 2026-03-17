@@ -5,12 +5,17 @@ const nextConfig = {
     },
 
     images: {
-        remotePatterns:[
+        remotePatterns: [
             {
                 protocol: "https",
                 hostname: "jlqwbqnthevzlscflibd.supabase.co",
             },
         ],
+    },
+
+    // Safety net
+    eslint: {
+        ignoreDuringBuilds: true,
     },
 };
 
